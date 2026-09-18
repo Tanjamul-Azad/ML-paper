@@ -1,0 +1,21 @@
+# Documentation-only repository. Everything is private unless explicitly allowed.
+*
+!/.gitignore
+!/README.md
+!/docs/
+/docs/*
+!/docs/START_HERE.md
+!/docs/CURRENT_STATUS.md
+!/docs/PROGRESS_LOG.md
+!/docs/DECISIONS.md
+!/docs/AUDIT.md
+!/docs/DATASET_AUDIT.md
+!/docs/LITERATURE_REVIEW.md
+!/docs/REFERENCE_AUDIT.md
+!/docs/METHODOLOGY.md
+!/docs/EXPERIMENT_PLAN.md
+!/docs/PILOT_RESULTS.md
+!/docs/HARDWARE.md
+!/docs/FIGURE_AUDIT.md
+!/docs/PUBLICATION_PLAN.md
+!/docs/REPRODUCIBILITY.md
