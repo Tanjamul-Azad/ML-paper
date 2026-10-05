@@ -1,3 +1,11 @@
+# 2026-10-05 independent-device completion
+
+N-BaIoT is newly prepared from official UCI author files for three fully separated devices. Full-source hashes and overlaps, finite predictors, first-representative policy, source-row role guards and retained supports are checked. A full raw64-to-float32 audit quantifies major near-identical attack collapse. This is a measured limitation, not a raw64 rerun. Do not equate representative-level results with every original traffic row. See OCTOBER_EXPERIMENTS for actual supports; older source audits below remain historical.
+
+---
+
+## Earlier record, preserved for history
+
 # Dataset audit
 
 Measured locally on 2026-09-18. Evidence: private `audit/data_audit.json`, `duplicate_confirmation.json`, source manifest and audit scripts. Counts below describe the supplied files, not every release of CIC data.

@@ -1,3 +1,11 @@
+# 2026-10-05 independent-device completion
+
+There are28 standard Matplotlib PNG/PDF/SVG figure sets. New sets21-28 cover independent-device recall/FPR, transfer direction, score distributions, reconstruction histories, equal-data adaptation, source-specific results, reference saturation and radius-floor control. All eight were visually inspected; the raw-score axis was repaired to avoid an offset/label collision. Final paper uses consistent scientific figures; all13 rendered pages inspected. Some mean plots omit seed error bars, so full per-seed tables and uncertainty remain in the notebook and captions disclose instability. No generated illustrative images or slides.
+
+---
+
+## Earlier record, preserved for history
+
 # Figure audit and design specification
 
 Every supplied PNG and both LaTeX-ZIP diagrams were visually inspected. Existing figures are private legacy evidence; source predictions and plotting code are missing for most of them. Do not repair unsupported numerical plots by manually editing image labels.

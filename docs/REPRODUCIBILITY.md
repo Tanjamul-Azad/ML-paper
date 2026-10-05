@@ -1,3 +1,17 @@
+# 2026-10-05 independent-device completion
+
+Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 13 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
+
+Local run commands are in private RUN_GUIDE.md. Use F-drive Python with -B. New trainers skip completed run metrics. Preserve immutable protocol files and old run namespaces. Reproduction in a clean environment or Kaggle/Colab is not yet tested.
+
+New verification files: output/independent_verification.json, output/reference_refresh_verification.json, output/radius_floor_training_audit.json, output/nbaiot_precision_audit.json and output/final_checks.json. Model configs and all raw scores are preserved; the final manifest identifies experiment files and excludes manuscript sources/prose/PDF.
+
+The native editor compiler is unavailable due to platform standard-directory failure. Existing F-drive MiKTeX compiles the official IEEE source in two passes, with package installation disabled. Do not run the historical write_paper_v2.py to rebuild the current paper: use build_conference_paper.py. Reinspect every rendered PDF page after any source change.
+
+---
+
+## Earlier record, preserved for history
+
 # Local runbook and public/private boundary
 
 **October update:** start with `research_update_2026-10-05/SUPERVISOR_NOTEBOOK.html` for displayed code and executed outputs, or its `.ipynb` to run cells. The private `RUN_GUIDE.md` lists verification commands. Complete model, score and partition artifacts exist for 20 main runs and 7 capacity fits. See [October ledger](OCTOBER_EXPERIMENTS.md). September commands below are historical and should not overwrite newer work.

@@ -1,3 +1,17 @@
+# 2026-10-05 independent-device completion
+
+Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 13 pages, comprising 11 main pages and two pages of references/appendix. This is a scientific-fit recommendation, not an acceptance prediction.
+
+Completed: closest-mechanism implementation, reconstruction author-code port, separate UCI traffic/device exclusion, prospective third-device settings, equal trusted-data controls, code/scores/model preservation, independent metric checks, conference-class compilation, page/figure QA and citation resolution.
+
+Remaining scientific gates: full raw64/population sensitivity, additional independent devices/captures, verified forward timestamps and contaminated-reference robustness if deployment claims are pursued. Existing numbers do not demonstrate overall SOTA. MCDE exact unspecified settings/author artifacts remain unavailable. These gaps must not be erased by rewriting prose.
+
+Human authors must inspect claims, code and outputs. ACSAC requires an LLM Usage Statement and a specific editorial-use confirmation after author inspection. The current draft discloses AI implementation/literature/writing assistance; it does not claim human inspection already happened. The final author-reviewed wording and next-cycle rules need checking. Submission, public artifact release and camera-ready publication have not occurred. The paper must remain outside GitHub.
+
+---
+
+## Earlier record, preserved for history
+
 # Publication plan and readiness gates
 
 **2026-10-05 update:** corrected-data pipeline, 20 main runs, 7 capacity fits, executed notebook and private full rewrite are complete. The September table below is partly superseded by [October results](OCTOBER_EXPERIMENTS.md). Final readiness needs fair selection, independent evaluation, closest-paper comparison, successful compilation and author review. September venue dates are historical, not current submission advice.

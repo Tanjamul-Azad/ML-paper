@@ -1,3 +1,19 @@
+# 2026-10-05 independent-device completion
+
+Current framework: source-only preprocessing and detector fitting; disjoint benign references and threshold roles; strict score>threshold alerts; complete target-device exclusion; held-out family evaluation; equal trusted benign-data adaptation on a separately fixed third device. Target attacks are evaluation-only.
+
+Phase5 source benign roles are54%training/6%validation/10%reference/10%threshold/20%test, with100-original-row guards. Known-family attack files split training/test; excluded family is never fitted. The guard and retain-all-benign feasibility amendments were fixed before any model outcomes.
+
+Phase6 uses the first20% target benign rows as a trusted pool, capped30,000 with guards. Threshold-only uses the full pool; MCDE reference-and-threshold uses its earlier/later halves. Target benign test cap40,000, attack type cap4,000 in source evaluation; third target family cap20,000. No added target data or detector refits. Released clean labels are an assumption, not a deployed certification mechanism.
+
+Phase7 changes only the floor of the existing local-radius score. A training-only scale/count diagnostic motivates retaining original/global, unweighted median and weighted median floors; weighted is declared primary before rescoring and third outputs. All alternatives are reported. Novelty is failure-mechanism isolation, not another architecture.
+
+Research questions: cross-population persistence of normalization; published/reconstruction controls under complete-device exclusion; threshold-only versus reference refresh after saturation; stable benefit from a training-derived radius safeguard. Answers retain the transfer failures and stronger baselines. Seeds measure initialization sensitivity on reused observations.
+
+---
+
+## Earlier record, preserved for history
+
 # Proposed methodology — protocol v0.1
 
 Status: design proposal, not a completed or novel validated method. Pilot results have already been inspected; their partitions cannot serve as an untouched final evaluation.

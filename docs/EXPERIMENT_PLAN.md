@@ -1,3 +1,11 @@
+# 2026-10-05 independent-device completion
+
+The independent-device plan is now executed, not pending: phase5/phase6/phase7 produced100 new model fits and controlled saved-model rescoring. Fixed third-device and floor protocols precede their outputs. Next experiments would need new namespaces: full raw64 population sensitivity and additional device/capture validation with reliable time/session provenance. Do not tune the reported third target again and call it untouched.
+
+---
+
+## Earlier record, preserved for history
+
 # Experiment plan — preregistration draft v0.1
 
 Status: proposed final study. No full production experiment or final result has been completed. Freeze this protocol after the closest-paper review and corrected-data inspection; record every subsequent deviation.

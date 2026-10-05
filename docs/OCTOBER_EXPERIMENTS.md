@@ -1,3 +1,65 @@
+# 2026-10-05 independent-device completion
+
+Updated 2026-10-05T23:37:12.838795+06:00. Latest counts, manuscript identity and interpretation supersede earlier completion sections below. These are original progress notes, not manuscript text.
+
+Completed 1,522 scientific fits: 142 earlier + 960 nested candidates + 320 outer refits + 100 independent-device fits. Display operations and notebook demonstration refits are excluded. The new batch has 20 source configurations, nine scoring methods, 1,440 source/transfer operating points, 1,520 third-device operating points and 960 fixed-centroid floor-ablation points. Reference and floor changes use no new detector fits.
+
+Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 13 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
+
+## Independent traffic and direct published-method comparison
+
+UCI author N-BaIoT release: [dataset](https://archive.ics.uci.edu/dataset/442/detection+of+iot+botnet+attacks+n+baiot), [dataset DOI](https://doi.org/10.24432/C5RC8J). The three devices have 1,018,298 / 835,876 / 1,098,677 valid original rows; prepared populations have 132,849 / 87,393 / 252,104 rows and 115 predictors. All benign data and a fixed 12% attack fingerprint sample are retained before first-float32-representative deduplication. Identities, labels and original row positions are metadata, not predictors.
+
+Two source devices, Gafgyt/Mirai exclusions, seeds11/29/47/71/101. Target devices never enter source model/preprocessor fitting. Overlap is removed against the entire valid source fingerprint inventory without consulting target labels. Row guards do not establish chronological or session independence. Model settings are fixed; MCDE unspecified settings are documented choices rather than exact author equivalence.
+
+| Method | Source recall / FPR (%) | Device-transfer recall / FPR (%) |
+|---|---:|---:|
+| RawCluster | 50.08 / 1.85 | 50.00 / 63.74 |
+| LocalRadius | 49.96 / 1.62 | 49.96 / 78.50 |
+| DiagonalCluster | 99.39 / 0.24 | 99.69 / 64.51 |
+| HGB | 99.95 / 0.75 | 100.00 / 51.79 |
+| MCDE | 99.95 / 0.64 | 100.00 / 51.27 |
+| IsolationForest | 90.51 / 0.82 | 89.02 / 28.96 |
+| Autoencoder | 99.98 / 1.51 | 99.98 / 64.04 |
+| RePO | 99.98 / 0.91 | 99.98 / 52.78 |
+| RePOPlus | 99.98 / 0.85 | 99.98 / 53.28 |
+
+Third-device results, nominal 1%. All methods share the trusted-pool budget within each source condition. Zero observed FPR is not a future guarantee.
+
+| Method / adaptation | Held-out recall (%) | Known recall (%) | FPR (%) |
+|---|---:|---:|---:|
+| MCDE / Frozen | 100.00 | 100.00 | 98.00 |
+| MCDE / ThresholdOnly | 0.00 | 0.00 | 0.00 |
+| MCDE / ReferenceAndThreshold | 99.91 | 99.96 | 3.25 |
+| HGB / ThresholdOnly | 96.48 | 99.94 | 0.53 |
+| Autoencoder / ThresholdOnly | 99.78 | 99.78 | 0.00 |
+| RePO / ThresholdOnly | 99.79 | 99.79 | 0.00 |
+| RePOPlus / ThresholdOnly | 99.82 | 99.82 | 0.00 |
+
+## Controlled interventions and mechanism
+
+MCDE source empirical ranks saturate: values beyond each reference maximum share a terminal score. All 20 third-device threshold-only cases set that terminal threshold and suppress held-out detection. Splitting the same trusted benign pool into reference and threshold roles restores rank ordering, while keeping every detector fixed. No clean-traffic contamination defense or distribution-free drift guarantee is tested.
+
+Global-floor / unweighted-median / observation-weighted-median third-device recall: 35.84 / 43.48 / 61.15%; achieved FPR rounds to 0.34% for each. Radius changes keep identical centroids, assignments and fitted transformations. Weighted results depend heavily on seed, including no seed11 gain. All alternatives and failures remain visible.
+
+## Population and uncertainty limits
+
+Full precision audit finds 185,207 / 186,870 / 185,518 additional distinct raw64 vectors merged into float32 groups, across Doorbell/Thermostat/Philips respectively. This is not a raw64 model rerun. After complete source overlap exclusion, the Philips target has Doorbell-source residual Gafgyt286/Mirai267 and Thermostat-source Gafgyt660/Mirai20,000 (cap); each case has 40,000 target benign rows. Macro averages weight cases equally and are not full natural-traffic effectiveness. Five seeds repeat these observations.
+
+First-seed uncertainty uses 1,000 source-file/original-row-block resamples and is descriptive, not independent-device or multiplicity-adjusted inference. Independently verified: 1,440 phase5 decisions, 1,520 phase6 decisions, 960 phase7 decisions, 1,200 direct-count rank checks, source configuration identity and target-role separation. Paper checks reproduce 64 historical table pairs, 18 new source/transfer pairs and 30 target-adaptation cells from CSVs.
+
+Protocols phase5/6/7 and all pre-score amendments are saved with SHA256. Private output/final_checks.json and evidence_manifest.json identify the final evidence. The manifest excludes every manuscript source/PDF and manuscript-prose generator. The PDF SHA256 is 87e1c72d826874030bb61a72675b2dbd9332c1b050d2fdddbc3d22291e1e5789. Old hashes below are historical and superseded.
+
+Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 13 pages, comprising 11 main pages and two pages of references/appendix. This is a scientific-fit recommendation, not an acceptance prediction.
+
+No SOTA claim, universal encoder-redundancy claim, discovered zero-day exploit, production FPR guarantee or claim that overfitting is solved. This is a bounded laboratory replication and failure analysis. It does not include timestamp-verified future traffic, all-device replication, a raw64 population rerun or exact unpublished author settings.
+
+The manuscript, LaTeX, PDF, code, datasets, notebooks, figures, checkpoints and raw scores remain private on F drive. GitHub receives only these separately written Markdown progress summaries. Never add the private research folder to this repository.
+
+---
+
+## Earlier record, preserved for history
+
 # October experiment ledger
 
 Updated 2026-10-05T21:58:43.332653+06:00. Current working title: **Unseen-Attack Detection under Alert Budgets: A Controlled Study of Local Cluster Normalization**.

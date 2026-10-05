@@ -1,3 +1,18 @@
+# 2026-10-05 independent-device completion
+
+Latest primary-source retrieval and implementation status:
+
+- [MCDE publisher article](https://www.mdpi.com/1099-4300/28/9/1026), Yue/Lu/Xie, Entropy28(9):1026, 15September2026, DOI10.3390/e28091026. The complete 27-page primary PDF was retrieved and read for implementation. Its device-transfer/threshold-recalibration study is prior work. Fifteen diagonal benign modes, conservative empirical upper-tail ranks, sparse-mode fallback and branch budget allocation are implemented directly. No author repository was located; HGB and some KMeans settings were not specified. This is a documented mechanism reimplementation, not an exact author-artifact rerun.
+- [RePO author repository](https://github.com/S-Mohammad-Hashemi/RePO), Hashemi/Keller. Flow architecture and five-epoch schedule were ported from the author's TensorFlow code to PyTorch/N-BaIoT. RePO+ uses 100 masks, five groups of20, minimum within each group and sum of five minima. Ordinary AE shares architecture/schedule without masking. Our denoising AE in the earlier phase is not RePO, and no adversarial robustness result is claimed.
+- [N-BaIoT research DOI](https://doi.org/10.1109/MPRV.2018.03367731), Meidan et al., IEEE Pervasive Computing17(3):12-22,2018. Metadata verified against Crossref; the official UCI dataset is used with recorded sources and checksums.
+- [Adaptive Conformal Inference](https://arxiv.org/abs/2106.00170), Gibbs/Candes, NeurIPS2021. Adaptive calibration is established. Our reference refresh is a controlled engineering intervention with no new conformal guarantee.
+
+Narrow contribution question: distinguish changing a threshold from changing collapsed empirical evidence on a device fully excluded from source development, using equal trusted-data access and frozen branch models. Neither clustering/fusion nor adaptation is claimed as newly invented. The literature review is focused, not an exhaustive systematic review. Full author-artifact equivalence and broader captures remain open.
+
+---
+
+## Earlier record, preserved for history
+
 # Focused literature review and novelty assessment
 
 ## Follow-up on 2026-10-05

@@ -1,3 +1,11 @@
+# 2026-10-05 independent-device completion
+
+The current private paper has22 resolved, cited references, with N-BaIoT metadata and adaptive-calibration context added. MCDE full primary PDF and RePO author implementation are recorded. Latest citation/table checks pass. Earlier legacy citation mismatches below describe the original manuscript and are not the reference list of the current rewrite. Complete human author verification remains required.
+
+---
+
+## Earlier record, preserved for history
+
 # Reference audit
 
 Date: 2026-09-18. All 22 inline citation keys were reviewed. The table identifies confirmed discrepancies and candidate matches; a same-title match is not automatic proof that two records are identical. Some Crossref requests were rate-limited. “Unresolved” means verification remains open, not that the work is fabricated.

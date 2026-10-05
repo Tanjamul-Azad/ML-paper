@@ -1,3 +1,18 @@
+# 2026-10-05 independent-device completion
+
+1. Shift the paper to calibration transfer and reference saturation after independent traffic rejects a universal local-normalization improvement.
+2. Retain MCDE and author-code-based RePO/RePO+ as direct comparators; disclose implementation/software/schema differences.
+3. Keep the ordinary AE. Its strong calibrated results contradict a blanket redundancy claim.
+4. Keep repairs bounded: reference refresh misses nominal FPR; radius-floor gain is seed-sensitive. No SOTA or stable superiority claim.
+5. Target ACSAC R+R in a future cycle using the latest verified official format. Full author review and current-cycle recheck are required before submission.
+6. Maintain one private executed notebook, one private manuscript source/PDF and few canonical guides. No slides. Notes-only GitHub.
+
+No SOTA claim, universal encoder-redundancy claim, discovered zero-day exploit, production FPR guarantee or claim that overfitting is solved. This is a bounded laboratory replication and failure analysis. It does not include timestamp-verified future traffic, all-device replication, a raw64 population rerun or exact unpublished author settings.
+
+---
+
+## Earlier record, preserved for history
+
 # Decision record
 
 ## D09 - October evidence and user steering (2026-10-05)
