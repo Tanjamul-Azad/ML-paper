@@ -1,6 +1,18 @@
 # Current status
 
-Updated: 2026-09-18. Phase: **audit and experiment design complete; development pilot complete; publication experiments pending**.
+Updated: 2026-10-05. Phase: **corrected-data study and executed supervisor notebook complete; private manuscript rewritten as a research draft; independent publication validation pending**.
+
+## Latest evidence
+
+See [October experiment ledger](OCTOBER_EXPERIMENTS.md) for current provenance, protocol and private artifact locations. Completed: 20 main runs, 142 study fits including 7 sensitivity fits, 1,307 verified metric records, and 10 executed notebook code cells. A fresh notebook clustering refit reproduced the archived decisions. User requests code/output rather than slides and no required Transformer.
+
+Key result: MLP Web detection falls from 97/104 to 10/104 under block stress. KMeans32 remains 89/104; baseline AE is 0/104, but a narrower-AE follow-up reaches 70/104. Clustering still misses all 13 SQL injections. Follow-ups are exploratory. No universal winner, solved overfitting, or SOTA claim.
+
+The complete rewritten manuscript remains outside GitHub. Built-in compilation failed on a platform-directory error; successful compilation and visual paper QA are not claimed. Remaining gates: untouched external/forward-time evaluation, fair tuning, stronger grouping and uncertainty, closest-work full-text comparison, final author/venue review.
+
+## Historical September audit
+
+The following checklist records the earlier audit. Pending corrected-data acquisition and manuscript rewriting are superseded by the October ledger; original-artifact limitations still apply.
 
 ## Completed
 

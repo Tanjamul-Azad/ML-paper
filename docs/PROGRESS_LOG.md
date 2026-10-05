@@ -1,5 +1,13 @@
 # Research progress log
 
+## 2026-10-05 - Corrected data, executed notebook and private rewrite
+
+Obtained corrected2017 data and prepared 251,547 distinct examples. Completed 15 primary runs, 5 block stress runs and 7 capacity fits: 142 fitted study models. Verified 1,307 score-derived evaluation records. Executed 10 notebook cells including a fresh clustering refit matching saved decisions. Generated ten consistent figure sets and a notebook HTML view. Rewrote the manuscript privately as a preliminary empirical draft. Built-in compilation failed with a platform-directory error; no compiled-layout claim.
+
+User requests code/output in a notebook, rejects slides, removes Transformer as a requirement, and reconfirms absolute manuscript privacy. User also requests natural academic writing, no em dashes or generic AI style, and proper references. Original files are preserved; research files stay on F drive outside this repository. Public updates contain progress Markdown only.
+
+MLP Web performance collapses under block grouping; clustering preserves 89/104 coverage; narrower AE reaches 70/104 while larger AEs fail at this budget. Clustering64/128 miss all 13 SQL injections. See OCTOBER_EXPERIMENTS for provenance, definitions and remaining gates.
+
 ## 2026-09-18 — Initial audit, protocol design and GPU development pilot
 
 User requested a full research audit, assessment of AE/clustering/Transformer suggestions, literature and publication planning, local compute feasibility and portable GitHub context. Explicit constraint: never publish the main paper.

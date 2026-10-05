@@ -1,5 +1,11 @@
 # Decision record
 
+## D09 - October evidence and user steering (2026-10-05)
+
+Corrected data and 142 study fits now exist; read OCTOBER_EXPERIMENTS before interpreting the older pilot. Transformer is no longer required. Keep completed results but omit it from required follow-up work. Deliver one executed notebook with a static HTML view, not slides. The complete paper rewrite stays private. Notebook, manuscript, figures, models and data must never be staged or pushed.
+
+AE/clustering necessity remains empirical: clustering32 survives Web block stress, smaller AE capacity recovers attacks, and successful clustering still misses SQL injection. Do not present post-hoc selection as independent confirmation. Next selection needs inner families with fresh outer evidence. No new architecture is established as novel. Prose must be natural, precise and citation-supported, without em dashes or generic AI-style claims.
+
 ## D01 - Rebuild evaluation before editing performance claims (2026-09-18)
 
 Reason: label-aware feature selection precedes the split, remaining duplicates cross the reconstructed split, baselines are unevenly prepared, and saved execution is incomplete. Keep legacy figures as historical evidence only. A high score alone does not diagnose model overfitting; the protocol is already sufficient reason to rerun.

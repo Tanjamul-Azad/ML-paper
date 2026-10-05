@@ -6,8 +6,8 @@ Improve an existing network intrusion detection paper to a defensible conference
 
 ## Read in order
 
-1. CURRENT_STATUS.md and DECISIONS.md.
-2. AUDIT.md, DATASET_AUDIT.md, and PILOT_RESULTS.md.
+1. CURRENT_STATUS.md, OCTOBER_EXPERIMENTS.md and DECISIONS.md.
+2. AUDIT.md, DATASET_AUDIT.md, and PILOT_RESULTS.md (September history).
 3. LITERATURE_REVIEW.md, METHODOLOGY.md, and EXPERIMENT_PLAN.md.
 4. REFERENCE_AUDIT.md, FIGURE_AUDIT.md, and PUBLICATION_PLAN.md.
 
@@ -34,12 +34,13 @@ Base directory: `F:/UIU/11th/ML/dep`.
 - `private_work/audit/`: JSON provenance, full data audits, reference metadata, pilot sample.
 - `private_work/pilot/`: development scores, split manifests, model artifacts, results.
 - `private_work/*.py`: local audit and pilot tools; commands in REPRODUCIBILITY.md.
+- `research_update_2026-10-05/`: corrected-data results, executed notebook and private manuscript rewrite. Never put this directory in Git. The HTML notebook preview is the supervisor entry point; no slides.
 - Original ZIPs, CSVs, notebook, figures and audio remain at their original locations. They have not been overwritten or reorganized destructively.
 
 A remote LLM can understand the decisions from this repository but cannot independently reproduce unpublished private files without local access. Do not pretend otherwise.
 
 ## Next concrete action
 
-Obtain the corrected CIC release with capture/session provenance, freeze an explicit source manifest and semantic feature mapping, and register splits before production training. Treat the current all-web pilot fold as development data already inspected. Run nested family holdouts with separate model-selection families, then untouched temporal/cross-dataset tests. Recover any missing original AE/SHAP/PSI code if it exists, but the absence does not prevent rebuilding a valid pipeline.
+Corrected data, 20 main runs and 7 sensitivity fits are complete. Next: a new nested family-selection protocol followed by untouched temporal/external tests. Treat inspected October folds as development evidence. Finish closest-work comparison before claiming novelty. User removed Transformer as a requirement and rejected slides. The complete private rewrite remains a preliminary research draft; built-in compilation failed on a platform error. User requires natural academic prose, no generic AI style or em dashes, and accurate supporting citations.
 
 Update CURRENT_STATUS, PROGRESS_LOG, and DECISIONS after every meaningful session. Add run IDs, source hashes, configuration, failure logs, and result locations. Never mark a planned run complete without artifacts. Do not create manuscript prose in this repository.

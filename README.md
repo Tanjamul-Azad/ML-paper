@@ -2,12 +2,13 @@
 
 Research audit and experiment planning records. **The manuscript, LaTeX source, manuscript figures, datasets, notebooks, and model artifacts are deliberately excluded.**
 
-Start with [START_HERE](docs/START_HERE.md), then [CURRENT_STATUS](docs/CURRENT_STATUS.md). Last research update: **2026-09-18, Asia/Dhaka**.
+Start with [START_HERE](docs/START_HERE.md), [CURRENT_STATUS](docs/CURRENT_STATUS.md) and [October experiments](docs/OCTOBER_EXPERIMENTS.md). Last research update: **2026-10-05, Asia/Dhaka**.
 
-Current verdict: the existing draft needs a substantive experimental rebuild before submission. Its high binary score does not establish unknown-attack detection, freedom from leakage, or deployment readiness. A small local development pilot has run successfully on an RTX 4060; it is not a paper result.
+Corrected-data evaluation completed locally: 20 main runs, 142 study fits and 1,307 verified metric records. The supervisor deliverable is a private executed notebook with code and outputs. A full manuscript rewrite is also private. Model rankings change with split and capacity; independent validation and novelty review remain necessary. No required Transformer and no slide deliverable.
 
 | Record | Purpose |
 |---|---|
+| [October experiment ledger](docs/OCTOBER_EXPERIMENTS.md) | Latest measured work, source hash, failures and private evidence locations |
 | [Audit](docs/AUDIT.md) | Evidence, scientific errors, and required repairs |
 | [Dataset audit](docs/DATASET_AUDIT.md) | Actual local counts, duplicates, schema, missing coverage |
 | [Literature review](docs/LITERATURE_REVIEW.md) | Verified sources, closest work, and novelty boundaries |

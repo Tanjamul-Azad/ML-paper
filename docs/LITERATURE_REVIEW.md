@@ -1,5 +1,13 @@
 # Focused literature review and novelty assessment
 
+## Follow-up on 2026-10-05
+
+Read the full HTML of [Farrukh et al.](https://arxiv.org/html/2309.07461v2): packet-image inputs, benign subclusters and stacked learners differ from our numeric-flow nearest-centroid score. Its headline number is not directly comparable. Rechecked the [Barnard publisher record](https://ieeexplore.ieee.org/document/9807332/) and found [author code](https://github.com/barnardp/Intrusion_Detection_XAI). Their AE consumes SHAP explanations, not our raw scaled predictors.
+
+The [Ismail author record](https://www.ipr.mdu.se/publications/7448-Evaluating_Explainable_Hybrid_Intrusion_Detection_Models_Under_ZeroDay_Conditions_) confirms a September2026 hybrid/unknown-attack explanation study. Publisher search text identifies NSL-KDD/UNSW-NB15 and AE-LSTM union logic; full retrieval was blocked (429). Complete protocol comparison remains pending. Do not infer a unique gap from incomplete retrieval.
+
+[RePO, Hashemi and Keller](https://arxiv.org/abs/2008.03677) is a further relevant comparator: denoising reconstruction and adversarial robustness differ from our ordinary AE. Current failures do not refute all reconstruction methods. Review remains focused, not systematic.
+
 Search date: 2026-09-18. This is an initial primary-source review, not a completed systematic review. Sources were checked through publisher/author pages, abstracts and relevant accessible text; full-text extraction and a forward/backward citation search remain necessary. Bibliographic repair is tracked separately.
 
 ## Closest evidence and implications

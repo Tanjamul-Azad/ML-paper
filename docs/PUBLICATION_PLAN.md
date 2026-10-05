@@ -1,5 +1,7 @@
 # Publication plan and readiness gates
 
+**2026-10-05 update:** corrected-data pipeline, 20 main runs, 7 capacity fits, executed notebook and private full rewrite are complete. The September table below is partly superseded by [October results](OCTOBER_EXPERIMENTS.md). Final readiness needs fair selection, independent evaluation, closest-paper comparison, successful compilation and author review. September venue dates are historical, not current submission advice.
+
 Current decision: do not submit the existing draft. Rebuild evidence and bibliography before polishing prose. Neither a high random-split score nor adding a Transformer establishes a publishable contribution.
 
 ## Work packages

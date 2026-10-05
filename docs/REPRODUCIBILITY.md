@@ -1,5 +1,9 @@
 # Local runbook and public/private boundary
 
+**October update:** start with `research_update_2026-10-05/SUPERVISOR_NOTEBOOK.html` for displayed code and executed outputs, or its `.ipynb` to run cells. The private `RUN_GUIDE.md` lists verification commands. Complete model, score and partition artifacts exist for 20 main runs and 7 capacity fits. See [October ledger](OCTOBER_EXPERIMENTS.md). September commands below are historical and should not overwrite newer work.
+
+The rewritten manuscript, notebook and support artifacts stay outside this repository. Hashing establishes identity, not independent reproduction without private files. Public notes alone cannot reproduce the study. Never upload the parent workspace.
+
 Workspace root: `F:\UIU\11th\ML\dep`. Original files remain where supplied. The `ML-paper` child directory is the documentation-only repository; do not initialize or publish the entire parent workspace.
 
 | Location relative to workspace | Contents | Publication policy |
