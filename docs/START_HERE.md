@@ -1,46 +1,21 @@
-# Handoff for a new research assistant
+# Handoff for another research assistant
 
-## User objective and hard boundary
+Read CURRENT_STATUS.md, OCTOBER_EXPERIMENTS.md, DECISIONS.md and LITERATURE_REVIEW.md first. September AUDIT/DATASET_AUDIT/PILOT_RESULTS are historical; do not treat their pending tasks as current status.
 
-Improve an existing network intrusion detection paper to a defensible conference submission. Audit novelty, data mining, dataset quality, methodology, overfitting, metrics, explanations, and figures. Evaluate a supervisor's suggestion to replace the autoencoder with clustering, or consider Transformers/BERT/T5 for unknown attacks. Keep portable research context on GitHub. **Never upload the manuscript, LaTeX ZIP/source, paper PDF, original figures, audio, or a copy of manuscript prose.**
+User wants meaningful, useful intrusion-detection research, not an architecture pile-up. No required Transformer; no slides. Show real executed notebook code and outputs. Academic prose must be natural, accurate, and avoid em dashes. Existing algorithms and closest work must receive proper credit.
 
-## Read in order
+Working title: Unseen-Attack Detection under Alert Budgets: A Controlled Study of Local Cluster Normalization.
 
-1. CURRENT_STATUS.md, OCTOBER_EXPERIMENTS.md and DECISIONS.md.
-2. AUDIT.md, DATASET_AUDIT.md, and PILOT_RESULTS.md (September history).
-3. LITERATURE_REVIEW.md, METHODOLOGY.md, and EXPERIMENT_PLAN.md.
-4. REFERENCE_AUDIT.md, FIGURE_AUDIT.md, and PUBLICATION_PLAN.md.
+1,422 study fits: 142 earlier fits plus 960 inner candidate fits and 320 outer refits. The latter cover 40 runs, two datasets, eight methods and five seeds. Notebook demo refits are excluded. A matched ablation rescored 80 saved clustering models with identical centroids, k and preprocessing, producing 640 independently verified operating points with no new fits. In the raw-selected CIC regime, normalization changes mean excluded recall from 29.01% to 40.55% and realized FPR from 1.08% to 1.01%. On UNSW it changes recall from 20.46% to 18.35% and FPR from 1.64% to 2.65%. This existing normalization idea helps the measured CIC population but fails to generalize to UNSW; the ablation is exploratory.
 
-## Evidence labels
+At the nominal 1% budget, protocol-conditional thresholds reduce absolute test-FPR budget error in 164/320 paired cases, reduce excluded-attack recall in 193/320, and reduce budget error without recall loss in 42/320. All eight models remain in the comparison. This is exploratory reuse of saved evaluation scores, not an untouched confirmation. The general-repair hypothesis is not supported; this intervention is retained as a negative result rather than adopted as an improved detector.
 
-- **Verified local:** source/code inspected or an audit actually executed.
-- **Reported legacy:** number printed in an old figure/draft; original execution not recovered.
-- **Pilot:** newly measured, exploratory, limited-scope result; never substitute for final experiments.
-- **Proposed:** a design or experiment not yet completed.
-- **Unresolved:** requires additional evidence; do not fill gaps with plausible guesses.
+Local base: `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. Main deliverables are one notebook (.ipynb and static .html), one manuscript source and its compiled PDF. Supporting artifacts stay under code/data/runs/output/figures/cache. Original inputs are preserved. Use the F-drive existing Python environment and RUN_GUIDE.md; do not overwrite frozen protocols/results.
 
-## Critical scientific context
+No universal winner, SOTA claim, real zero-day discovery, production false-alarm guarantee, or claim that overfitting is solved. Protocol-conditional calibration is established prior art. Exact MCDE/specialized reconstruction baselines and independent forward-time traffic remain publication gates.
 
-The original task is binary benign-vs-attack classification on numeric CIC flow features. It is not HTTP payload analysis, e-commerce transaction analysis, or verified exploit identification. Dataset-year change alone is not proof of concept drift. A benign-only anomaly detector is not automatically a detector of previously unseen attack families. A supervised classifier can also generalize to held-out families; model type does not settle this question.
+Next: supervisor review, an untouched forward-time confirmation of the calibration intervention, exact closest baselines, sensitivity to curation, and target-venue formatting after the venue is chosen. Distinguish completed exploratory results from independently confirmed improvements. Benchmark rows are not newly discovered zero-day vulnerabilities.
 
-The local draft and public Kaggle notebook do not provide a complete reproducible experiment. Full-data target-aware feature selection precedes splitting. Exact float32 feature duplicates and conflicting binary labels remain. Both clustering and AE must earn a place through incremental benefit at a matched false-alarm budget. No method has yet earned a final novelty claim.
+The manuscript, LaTeX, PDF, code, datasets, notebooks, figures, checkpoints, raw scores and detailed artifacts remain private on F drive. Only independently written Markdown progress notes belong in this Git repository.
 
-## Local workspace map
-
-Base directory: `F:/UIU/11th/ML/dep`.
-
-- `ML-paper/`: this documentation-only Git repository.
-- `private_work/manuscript_original/`: privately extracted source and original figures.
-- `private_work/audit/`: JSON provenance, full data audits, reference metadata, pilot sample.
-- `private_work/pilot/`: development scores, split manifests, model artifacts, results.
-- `private_work/*.py`: local audit and pilot tools; commands in REPRODUCIBILITY.md.
-- `research_update_2026-10-05/`: corrected-data results, executed notebook and private manuscript rewrite. Never put this directory in Git. The HTML notebook preview is the supervisor entry point; no slides.
-- Original ZIPs, CSVs, notebook, figures and audio remain at their original locations. They have not been overwritten or reorganized destructively.
-
-A remote LLM can understand the decisions from this repository but cannot independently reproduce unpublished private files without local access. Do not pretend otherwise.
-
-## Next concrete action
-
-Corrected data, 20 main runs and 7 sensitivity fits are complete. Next: a new nested family-selection protocol followed by untouched temporal/external tests. Treat inspected October folds as development evidence. Finish closest-work comparison before claiming novelty. User removed Transformer as a requirement and rejected slides. The complete private rewrite remains a preliminary research draft; built-in compilation failed on a platform error. User requires natural academic prose, no generic AI style or em dashes, and accurate supporting citations.
-
-Update CURRENT_STATUS, PROGRESS_LOG, and DECISIONS after every meaningful session. Add run IDs, source hashes, configuration, failure logs, and result locations. Never mark a planned run complete without artifacts. Do not create manuscript prose in this repository.
+A remote LLM can recover decisions from these notes; it cannot independently reproduce private unpublished files without authorized local access.

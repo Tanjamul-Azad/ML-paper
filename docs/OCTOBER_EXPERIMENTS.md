@@ -1,68 +1,101 @@
 # October experiment ledger
 
-Updated 2026-10-05 (Asia/Dhaka). This is a progress record, not manuscript text. The user reconfirmed that the paper must never reach GitHub. Public scope remains these Markdown notes only.
+Updated 2026-10-05T21:58:43.332653+06:00. Current working title: **Unseen-Attack Detection under Alert Budgets: A Controlled Study of Local Cluster Normalization**.
 
-## Scope and decisions
+## Completed evidence
 
-- Supervisor meeting: 2026-10-06. Show code with executed notebook outputs; user explicitly rejected slides.
-- Transformer is no longer required. Fifteen primary runs had completed with its baseline; preserve this history, but follow-ups use six core alternatives without it.
-- Direction: test reconstruction necessity, model capacity and excluded-family detection under benign false-alarm constraints. No confirmed new algorithm, SOTA or deployment claim.
-- The original draft's e-commerce/adaptation narrative is superseded by a flow-IDS empirical study. A complete manuscript rewrite exists privately; final-test evidence and compilation/layout are not complete.
+1,422 study fits: 142 earlier fits plus 960 inner candidate fits and 320 outer refits. The latter cover 40 runs, two datasets, eight methods and five seeds. Notebook demo refits are excluded. A matched ablation rescored 80 saved clustering models with identical centroids, k and preprocessing, producing 640 independently verified operating points with no new fits. In the raw-selected CIC regime, normalization changes mean excluded recall from 29.01% to 40.55% and realized FPR from 1.08% to 1.01%. On UNSW it changes recall from 20.46% to 18.35% and FPR from 1.64% to 2.65%. This existing normalization idea helps the measured CIC population but fails to generalize to UNSW; the ablation is exploratory.
 
-## Measured work and provenance
+- Phase one: 15 fixed-baseline CIC runs, five source/five-minute-block stress runs and seven capacity fits. The archived Transformer is outside the current direction.
+- Phase two: corrected CICIDS2017 targets Web, Authentication, DoS/DDoS, Bot and PortScan; separate UNSW-NB15 targets Exploits, Generic and Reconnaissance. Seeds 11,29,47,71,101.
+- Each model has three candidates selected using different excluded groups inside outer training. All choices precede outer scores. Equal candidate counts do not mean equal wall-time searches.
+- Independently verified: 960 candidate records, 320 choices, 1,280 operating-point records; zero recorded fingerprint/group overlap and zero outer target in fitting. First-seed checks reconstruct the actual medians/scaler moments/vocabularies of 256 preprocessors.
+- Phase three: 2,560 paired pooled/conditional operating-point records from unchanged models; no extra model fits. At the nominal 1% budget, protocol-conditional thresholds reduce absolute test-FPR budget error in 164/320 paired cases, reduce excluded-attack recall in 193/320, and reduce budget error without recall loss in 42/320. All eight models remain in the comparison. This is exploratory reuse of saved evaluation scores, not an untouched confirmation. The general-repair hypothesis is not supported; this intervention is retained as a negative result rather than adopted as an improved detector.
+- Main private notebook: 16 executed code cells, no error outputs, code and actual results. HTML is its static export. No slides.
+- Twenty scientific figure sets have PNG/PDF/SVG exports. The private paper has 20 cited references, compiled with the existing F-drive MiKTeX, with all final PDF pages visually inspected.
 
-| Item | Record |
-|---|---|
-| Author-corrected source | [CNS2022 release](https://intrusion-detection.distrinet-research.be/CNS2022/Dataset_Download.html), CICIDS2017 improved ZIP |
-| Source SHA256 | `97fdb91d339e2d8cf5627f981b831e5e7e400b981c58181c451a38fd03c48883` |
-| Source / prepared rows | 2,099,976 / 251,547 |
-| Predictors | 82; exclude identity, IPs, ports, timestamp, label and attempted flags |
-| Corrected attempted policy | 11,979 attempted rows mapped to benign following release guidance |
-| Quality exclusions | 598 invalid/nonfinite physical rows; label-conflicting groups and duplicate representatives also removed |
-| Primary namespace | `corrected-cic2017-v1`: five excluded groups × seeds42/123/2026 =15 runs,105 model fits |
-| Stress namespace | `corrected-cic2017-blocks-v1`: five groups × seed42 =5 runs,30 fits |
-| Sensitivity namespace | `web-sensitivity`: three AE widths and four additional cluster counts =7 fits |
-| Total | 20 main runs;142 study fits; a separate notebook KMeans refit is a demonstration, not independent evidence |
-| Verification | 1,300 main metric records plus7 sensitivity records recomputed from saved scores |
-| Notebook | 10 code cells successfully executed; includes real training, displayed outputs, tables and plots |
-| Evidence inventory | 628 private experiment files hashed; manuscript excluded from that inventory |
-| Inventory SHA256 | `a3690af64dbc44d2f24ba069edc187fc306b67b8c7deee920cf4bdb87bbc9234` |
-| Hardware | RTX4060,8GiB GPU;15.62GiB RAM; all research files/cache on F drive |
+## Measured comparison at nominal 1% calibration budget
 
-## Protocol summary
+The following averages weight each excluded group equally within a dataset, then average five seeds. Recall and realized test FPR are separate; these are not matched-achieved-FPR rankings.
 
-All target-group rows stay out of train, validation, benign reference mapping and calibration. Primary known-data allocation is50/10/10/10/20; training capped at80,000. Models share supervised training rows; anomaly models use the benign subset. Preprocessing is fitted on the corresponding training data. Four nominal FPR budgets:0.1%,0.5%,1%,2%. The actual test FPR is always a separate measurement.
+| Dataset | Model | Excluded recall (%) | Realized benign FPR (%) |
+|---|---|---:|---:|
+| CIC | Autoencoder | 12.81 | 1.18 |
+| CIC | DenoisingAE | 14.61 | 1.18 |
+| CIC | IsolationForest | 10.43 | 1.13 |
+| CIC | KMeans | 29.01 | 1.08 |
+| CIC | KMeansLocal | 46.97 | 1.05 |
+| CIC | LogisticRegression | 6.71 | 1.17 |
+| CIC | MLP | 26.48 | 1.03 |
+| CIC | XGBoost | 35.75 | 1.21 |
+| UNSW | Autoencoder | 21.83 | 1.57 |
+| UNSW | DenoisingAE | 17.21 | 1.52 |
+| UNSW | IsolationForest | 10.27 | 1.01 |
+| UNSW | KMeans | 20.46 | 1.64 |
+| UNSW | KMeansLocal | 16.23 | 2.41 |
+| UNSW | LogisticRegression | 31.49 | 2.41 |
+| UNSW | MLP | 74.38 | 4.07 |
+| UNSW | XGBoost | 63.11 | 3.72 |
 
-The primary population is fingerprint-deduplicated. The secondary split separates source-file/five-minute blocks and puts all target-containing blocks entirely in test. This changes the population and is not chronological, host-independent or a causal split-only ablation. Stress analysis, MLP fusion and capacity checks are exploratory additions after inspecting earlier results.
+## Matched normalization ablation
 
-Full-source conflict exclusion and label-dependent sampling are benchmark-curation choices. They can alter difficulty and prevalence; do not describe the pipeline as universally leakage-free or its precision as a deployment estimate. Three seeds reuse the same excluded examples.
+Each pair fixes centroids, k, preprocessing and rows. Both original inner-selection regimes are retained. Phase-four protocol was frozen before computing this ablation but after inspecting earlier outcomes, so it is exploratory. Each score receives a separate threshold from identical benign calibration rows.
 
-## Findings that change the research decision
+| Dataset | k selected by | Score | Recall (%) | Realized FPR (%) |
+|---|---|---|---:|---:|
+| CIC | KMeans | Normalized | 40.55 | 1.01 |
+| CIC | KMeans | Raw | 29.01 | 1.08 |
+| CIC | KMeansLocal | Normalized | 46.97 | 1.05 |
+| CIC | KMeansLocal | Raw | 37.78 | 1.09 |
+| UNSW | KMeans | Normalized | 18.35 | 2.65 |
+| UNSW | KMeans | Raw | 20.46 | 1.64 |
+| UNSW | KMeansLocal | Normalized | 16.23 | 2.41 |
+| UNSW | KMeansLocal | Raw | 19.46 | 1.54 |
 
-1. Primary Web MLP recall averaged93.91%; paired seed42 was97/104. Block stress detects10/104. Thus the apparent primary advantage is not robust to this grouping change.
-2. Baseline KMeans32 detects89/104 Web flows in both paired settings. Baseline AE latent16 detects0/104. These are not universal model rankings: performance varies substantially across the five target groups.
-3. Longer-training sensitivity weakens any claim that AE is useless: latent4 detects70/104 at0.847% actual FPR. Latent16/32 remain at0. KMeans8/16 also detect0.
-4. Exploratory KMeans64 detects89/104 at0.815% actual FPR; KMeans128 detects90/104 at0.954%. Neither catches any of13 SQL-injection examples. The best-looking inspected setting is not a confirmed selected model.
-5. AE latent4's recovered rows are exclusively brute force: pooled Web recall67.31%, within-Web family-macro recall31.96%. Report family failures alongside pooled scores.
-6. Primary XGBoost--MLP rank fusion has promising complementary coverage, but was added post-hoc. Established rank aggregation is not algorithmic novelty. The high-recall block XGBoost--KMeans fusion exceeds the nominal FPR on test and must not be sold as an achieved1% result.
+The compact/broad-cluster distance-scale problem motivates this existing radius-normalization rule. Its benchmark-specific benefit, failure on UNSW, component-family results and first-seed paired group intervals are preserved. Thirty-two normalization uncertainty records use 1,000 paired resamples; CIC groups are five-minute blocks and UNSW groups are predictor representatives, not sessions. No general robustness or newly invented algorithm is claimed.
 
-## Private evidence map
+## Calibration intervention
 
-Workspace subfolder: `research_update_2026-10-05/` (outside this Git repository).
+| Dataset | Model | Rule | Recall (%) | FPR (%) | Unsupported target (%) |
+|---|---|---|---:|---:|---:|
+| CIC | Autoencoder | Pooled | 12.81 | 1.18 | 0.00 |
+| CIC | Autoencoder | ProtocolConditional | 8.48 | 1.03 | 0.18 |
+| CIC | KMeans | Pooled | 29.01 | 1.08 | 0.00 |
+| CIC | KMeans | ProtocolConditional | 13.94 | 0.91 | 0.18 |
+| CIC | MLP | Pooled | 26.48 | 1.03 | 0.00 |
+| CIC | MLP | ProtocolConditional | 18.75 | 0.92 | 0.18 |
+| CIC | XGBoost | Pooled | 35.75 | 1.21 | 0.00 |
+| CIC | XGBoost | ProtocolConditional | 22.05 | 1.17 | 0.18 |
+| UNSW | Autoencoder | Pooled | 21.83 | 1.57 | 0.00 |
+| UNSW | Autoencoder | ProtocolConditional | 32.42 | 1.86 | 0.22 |
+| UNSW | KMeans | Pooled | 20.46 | 1.64 | 0.00 |
+| UNSW | KMeans | ProtocolConditional | 25.70 | 1.73 | 0.22 |
+| UNSW | MLP | Pooled | 74.38 | 4.07 | 0.00 |
+| UNSW | MLP | ProtocolConditional | 75.34 | 4.01 | 0.22 |
+| UNSW | XGBoost | Pooled | 63.11 | 3.72 | 0.00 |
+| UNSW | XGBoost | ProtocolConditional | 63.71 | 3.78 | 0.22 |
 
-- `SUPERVISOR_NOTEBOOK.ipynb`: executed notebook. Its `.html` is the same notebook's easy-to-open static view.
-- `paper_rewrite.tex`: private rewritten research draft; **never publish**.
-- `runs/`: five partition manifests per main run, fitted scalers/models, raw scores, neural histories, configs and result/verification JSON.
-- `data/preparation_report.json`: complete counts, feature list, quality rules and source hash.
-- `output/`: derived metrics, live-demo checks and notebook execution record.
-- `figures/`: ten consistent PNG/PDF/SVG figure sets. No figure upload is authorized.
+The observable group is transport protocol. Each threshold uses only benign calibration scores in that group. A missing group or insufficient support for a finite order-statistic threshold gives infinity: its traffic cannot trigger an automatic alert, and its unsupported fraction is a reported blind spot. No test label chooses a threshold or a winner. Conditional exchangeability is required; arbitrary shift within a protocol remains unresolved.
 
-The notebook may be viewed with saved outputs elsewhere, but rerunning needs the private supporting data/code/artifacts. Cloud execution has not been tested. The public notes do not themselves provide full reproducibility.
+## Dataset provenance and caveats
 
-## Remaining gates
+- Corrected CICIDS2017 author release: 2,099,976 source rows, 251,547 curated distinct float32 representatives, 82 numeric predictors. Global label-conflict curation and label-dependent sampling are benchmark policies, not deployable preprocessing. Five-minute blocks are neither full sessions nor forward-time evaluation.
+- Corrected archive SHA256: `97fdb91d339e2d8cf5627f981b831e5e7e400b981c58181c451a38fd03c48883`.
+- UNSW released roles pinned by official counts and independent mirror agreement: 175,341 development / 82,332 evaluation original rows. Curated development 99,268 / evaluation 52,644. Some mirror filenames are reversed. No author checksum certification is claimed.
+- UNSW evaluation removes predictor overlap with the full development source and duplicates without consulting test labels. Float32 conversion merged no distinct source predictor groups.
+- A later ambiguity audit found 361 remaining test family-conflict groups, four binary-conflicting. Removing these representatives from frozen predictions changes target recall by at most 0.357 percentage points at the 1% budget. Primary results remain unchanged; this is post-hoc changed-population sensitivity.
+- UNSW is a separate within-dataset replication with another feature schema; it is not transfer of CIC-trained models. Its released rows do not establish session/host independence. Both sources are laboratory collections.
 
-Freeze nested family/model selection and untouched external or forward-time evaluation. Compare tuning budgets; test attempted-label/conflict-curation policy; quantify family/block uncertainty; investigate SQL-injection failures. Finish full-text comparison with the closest hybrid and clustering studies. Review authorship and every rewritten claim. The built-in LaTeX compiler returned `Unable to find standard directories for platform`; no successful manuscript compile or rendered layout review is claimed.
+## Private entry points and verification
 
-Original files remain preserved. Existing slide-style preview was abandoned after the user's steering and is not a deliverable. Do not upload artifacts or manuscript to Kaggle, Colab, GitHub, or another service without a separate explicit instruction.
+Base: `F:/UIU/11th/ML/dep/research_update_2026-10-05/`.
 
-Final local checks matched all 30 primary manuscript table entries and all seven sensitivity rows against recorded results. Eleven in-text reference keys resolve to bibliography entries; the revised manuscript contains no em dashes. This is a source/arithmetic check, not a successful PDF compile. Notebook preview screenshot QA was rejected by automatic approval policy; its actual code execution and metrics were verified.
+Open `SUPERVISOR_NOTEBOOK.html` or `SUPERVISOR_NOTEBOOK.ipynb`; private manuscript source is `paper_rewrite.tex`, compiled PDF `output/manuscript/paper_rewrite.pdf`. Reproduction commands are in `RUN_GUIDE.md`. `output/final_checks.json`, `nested_verification.json`, `fitted_preprocessing_checks.json`, protocol calibration CSVs and `evidence_manifest.json` preserve checks. The manifest excludes manuscript sources/prose/PDFs and original source archives.
+
+Private manifest SHA256: `98f14a8bc697722fa2d6aa2e533f5e02e34c91da3979d9dc433c881d50befa97`; 7273 hashed private experiment files. The manifest's contents are not published here.
+
+The native editor compiler still has its platform-directory error; successful PDF compilation uses an already-installed F-drive compiler with F-drive cache/config/temp paths. No compiler/plugin was installed. HTML contents/execution were verified; browser screenshot QA was blocked by automatic approval policy, so visual browser QA is not claimed.
+
+No universal winner, SOTA claim, real zero-day discovery, production false-alarm guarantee, or claim that overfitting is solved. Protocol-conditional calibration is established prior art. Exact MCDE/specialized reconstruction baselines and independent forward-time traffic remain publication gates.
+
+The manuscript, LaTeX, PDF, code, datasets, notebooks, figures, checkpoints, raw scores and detailed artifacts remain private on F drive. Only independently written Markdown progress notes belong in this Git repository.

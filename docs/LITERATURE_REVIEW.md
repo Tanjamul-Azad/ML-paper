@@ -43,3 +43,11 @@ Potential contribution package: (1) reproducible grouped/family-held-out evaluat
 Read the closest six full papers and record dataset version, exact unknown definition, split unit, threshold tuning, false-alarm control, duplicate handling, branch fusion, feature inputs and code availability. Search cited/citing work with combinations of `open set intrusion detection`, `held-out attack family`, `hybrid anomaly supervised detector false positive budget`, `SHAP autoencoder intrusion`, and `CICIDS leakage corrected dataset`. Record inclusion/exclusion reasons, dates and DOI metadata. Compare the proposed finding with the September 2026 hybrid paper before claiming a gap.
 
 If that comparison closes the gap, pivot toward a rigorous replication/measurement study or a different validated question. Do not add an LLM merely to make the architecture appear novel.
+
+## Latest closest work and claim boundary, 5 October 2026
+
+- Yue, Lu and Xie, *Detecting Unseen IoT Attacks with Calibrated Dual Evidence Under Low False-Positive Budget*, Entropy 28(9):1026, 15 September 2026, [publisher](https://www.mdpi.com/1099-4300/28/9/1026), DOI 10.3390/e28091026. Publisher-indexed full methods/conclusion and Crossref metadata were checked. Budgeted supervised/benign-mode fusion is existing work; temporal/cross-network false-alarm stability remains a stated limitation. Its exact implementation is not reproduced here, so no direct numerical superiority claim is made.
+- Bostrom and Johansson, *Mondrian conformal regressors*, PMLR 128:114-133, 2020, [author proceedings record](https://proceedings.mlr.press/v128/bostrom20a.html). Category-wise calibration is prior art; this is a regression paper, not an intrusion benchmark. Our protocol-specific threshold is an application of the established grouping idea.
+- The current literature-driven problem is nominal-vs-realized alert-budget failure. Conditional calibration is tested as a narrowly targeted intervention with explicit detection/coverage tradeoffs, not a complete solution to arbitrary drift.
+
+Twenty references are cited in the private rewritten draft. Metadata corrections and primary-source access limitations are recorded locally. No manuscript text is reproduced in these progress notes.

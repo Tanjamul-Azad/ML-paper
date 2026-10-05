@@ -41,3 +41,15 @@ For a new assistant: read START_HERE, CURRENT_STATUS, DECISIONS, DATASET_AUDIT, 
 The repository `.gitignore` defaults to ignoring everything and explicitly allows only named documentation files. This is a convenience, not a security boundary: force-add/API uploads can bypass it. Before every push, inspect staged paths and contents; allow only the approved list. Never use a recursive workspace upload, `git add -f`, or a parent-directory push. Do not publish `.tex`, `.bib`, PDF/manuscript text, ZIPs, raw data, notebooks, images, audio, model weights or credentials.
 
 Every substantive session should update CURRENT_STATUS, DECISIONS for changed choices, and PROGRESS_LOG with work done, evidence/artifact paths, limitations and the next action. Publish only reviewed summaries. This session creates records for continuity; it does not establish an automatic background scheduler.
+
+## 5 October completion and narrower direction
+
+1,422 study fits: 142 earlier fits plus 960 inner candidate fits and 320 outer refits. The latter cover 40 runs, two datasets, eight methods and five seeds. Notebook demo refits are excluded. A matched ablation rescored 80 saved clustering models with identical centroids, k and preprocessing, producing 640 independently verified operating points with no new fits. In the raw-selected CIC regime, normalization changes mean excluded recall from 29.01% to 40.55% and realized FPR from 1.08% to 1.01%. On UNSW it changes recall from 20.46% to 18.35% and FPR from 1.64% to 2.65%. This existing normalization idea helps the measured CIC population but fails to generalize to UNSW; the ablation is exploratory.
+
+At the nominal 1% budget, protocol-conditional thresholds reduce absolute test-FPR budget error in 164/320 paired cases, reduce excluded-attack recall in 193/320, and reduce budget error without recall loss in 42/320. All eight models remain in the comparison. This is exploratory reuse of saved evaluation scores, not an untouched confirmation. The general-repair hypothesis is not supported; this intervention is retained as a negative result rather than adopted as an improved detector.
+
+Simple classifier/clustering fusion is already close prior art, including [MCDE](https://www.mdpi.com/1099-4300/28/9/1026). The current intervention instead audits an observable protocol-specific calibration rule, an established conditional-calibration idea. It is an application and failure analysis, not invented mathematics. Claims require joint recall/FPR reporting and unsupported-group disclosure.
+
+No universal winner, SOTA claim, real zero-day discovery, production false-alarm guarantee, or claim that overfitting is solved. Protocol-conditional calibration is established prior art. Exact MCDE/specialized reconstruction baselines and independent forward-time traffic remain publication gates.
+
+Native compiler failure is superseded for actual PDF delivery by the working existing F-drive MiKTeX route. All final PDF pages were inspected. The full private notebook executed with 16 cells. The manuscript and supporting artifacts remain private.
