@@ -51,3 +51,7 @@ Simple classifier/clustering fusion is already close prior art, including [MCDE]
 No universal winner, SOTA claim, real zero-day discovery, production false-alarm guarantee, or claim that overfitting is solved. Protocol-conditional calibration is established prior art. Exact MCDE/specialized reconstruction baselines and independent forward-time traffic remain publication gates.
 
 Native compiler failure is superseded for actual PDF delivery by the working existing F-drive MiKTeX route. All final PDF pages were inspected. The full private notebook executed with 16 cells. The manuscript and supporting artifacts remain private.
+
+## 6 October: legacy Kaggle comparison clarified
+
+Public notebook code recovered and matched to the local source;100CV-fit tuning setup verified, but exact linked-run outputs remain unrecovered. New evaluation is broader and better controlled; no numerical superiority claim is justified across different tasks/populations. Details in AUDIT.md. Manuscript and scientific results unchanged.

@@ -51,3 +51,15 @@ Evidence: complete private `main.tex`, `references.bib`, `mlpaper.ipynb`, suppli
 The displayed matrix contains TN=418606, FP=406, FN=27, TP=85121; N=504160. Its arithmetic is internally coherent: accuracy=.99914115, precision=.99525296, recall=.99968291, F1=.99746301 and benign FPR=.00096895. This verifies arithmetic only, not provenance or validity. That FPR corresponds to approximately **969 false alarms per million benign flows**, so calling 406 false positives operationally negligible requires a workload and alert-aggregation model.
 
 Overfitting remains unresolved: no learning curves, across-seed variance, robust temporal test, family holdouts or external predictive evaluation were supplied. Existing leakage is confirmed; the magnitude of its impact on scores has not been measured by a controlled ablation.
+
+## 6 October 2026: comparison with the user-linked legacy Kaggle run
+
+The user supplied https://www.kaggle.com/code/tanjamulazad/mlpaper/edit/run/323348531. The public page redirects to the notebook and its oEmbed link references that version ID. The official public pull endpoint returned version1 source, whose cell sources exactly match the supplied local mlpaper.ipynb. The pull strips outputs; the specific run's complete outputs were not recovered. Do not treat the locally saved early Label KeyError as proof that the user's separate successful runs did not happen.
+
+The code contains20 XGBoost search configurations and5fold CV, planning100CV fits plus refitting and conventional baselines. This verifies an extensive tuning setup; it does not verify the completed-fit count of this exact run. Earlier work must not be dismissed merely because it had fewer datasets or because an archived copy stopped early.
+
+Confirmed from the public code: cell18 chooses features using all labels before the cell20split; the80/20 random row split does not withhold an attack family; LR/MLP receive unscaled features although StandardScaler is imported; final XGBoost settings are hard-coded rather than directly taken from saved search output. Test eval_set logging alone is not test-label gradient training, and no early stopping is shown.
+
+The old manuscript reports binary F1=0.9975 and rounded AUROC=1.0000. Those numbers are not directly comparable to excluded-family recall and realized FPR on corrected/curated populations or entirely different target devices. The new protocol is more comprehensive and more defensible, but superior predictive performance over the old pipeline has not been demonstrated by a matched rerun. Current repairs also do not beat the stronger reconstruction controls generally. More fits alone do not resolve leakage, domain shift or novelty. A future fair old-versus-new score comparison would require identical train/validation/test populations, a corrected feature-selection pipeline and matched operating objectives; do not call the current study that experiment.
+
+Source pull and a structured comparison report remain private. No manuscript content or source notebook is published by this update.
