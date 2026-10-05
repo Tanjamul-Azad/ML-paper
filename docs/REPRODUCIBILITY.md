@@ -1,6 +1,6 @@
 # 2026-10-05 independent-device completion
 
-Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 13 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
+Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 12 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
 
 Local run commands are in private RUN_GUIDE.md. Use F-drive Python with -B. New trainers skip completed run metrics. Preserve immutable protocol files and old run namespaces. Reproduction in a clean environment or Kaggle/Colab is not yet tested.
 

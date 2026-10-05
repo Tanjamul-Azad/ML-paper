@@ -1,10 +1,10 @@
 # 2026-10-05 independent-device completion
 
-Updated 2026-10-05T23:37:12.838795+06:00. Latest counts, manuscript identity and interpretation supersede earlier completion sections below. These are original progress notes, not manuscript text.
+Updated 2026-10-06T00:03:21.295987+06:00. Latest counts, manuscript identity and interpretation supersede earlier completion sections below. These are original progress notes, not manuscript text.
 
 Completed 1,522 scientific fits: 142 earlier + 960 nested candidates + 320 outer refits + 100 independent-device fits. Display operations and notebook demonstration refits are excluded. The new batch has 20 source configurations, nine scoring methods, 1,440 source/transfer operating points, 1,520 third-device operating points and 960 fixed-centroid floor-ablation points. Reference and floor changes use no new detector fits.
 
-Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 13 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
+Canonical private files: `SUPERVISOR_NOTEBOOK.html`, `SUPERVISOR_NOTEBOOK.ipynb`, `paper_rewrite.tex` and `output/manuscript/paper_rewrite.pdf`, under `F:/UIU/11th/ML/dep/research_update_2026-10-05/`. One notebook contains 20 executed code cells and no error outputs. There are 28 Matplotlib PNG/PDF/SVG figure sets and 22 resolved cited references. All 12 final PDF pages were visually inspected. HTML export and notebook execution passed; HTML browser screenshot inspection was blocked by automatic approval policy.
 
 ## Independent traffic and direct published-method comparison
 
@@ -48,9 +48,9 @@ Full precision audit finds 185,207 / 186,870 / 185,518 additional distinct raw64
 
 First-seed uncertainty uses 1,000 source-file/original-row-block resamples and is descriptive, not independent-device or multiplicity-adjusted inference. Independently verified: 1,440 phase5 decisions, 1,520 phase6 decisions, 960 phase7 decisions, 1,200 direct-count rank checks, source configuration identity and target-role separation. Paper checks reproduce 64 historical table pairs, 18 new source/transfer pairs and 30 target-adaptation cells from CSVs.
 
-Protocols phase5/6/7 and all pre-score amendments are saved with SHA256. Private output/final_checks.json and evidence_manifest.json identify the final evidence. The manifest excludes every manuscript source/PDF and manuscript-prose generator. The PDF SHA256 is 87e1c72d826874030bb61a72675b2dbd9332c1b050d2fdddbc3d22291e1e5789. Old hashes below are historical and superseded.
+Protocols phase5/6/7 and all pre-score amendments are saved with SHA256. Private output/final_checks.json and evidence_manifest.json identify the final evidence. The manifest excludes every manuscript source/PDF and manuscript-prose generator. The PDF SHA256 is 163436aa7faaa4d7c15ac4272804dc345517843d360aeb77ce8c31503a3d2dd0. Old hashes below are historical and superseded.
 
-Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 13 pages, comprising 11 main pages and two pages of references/appendix. This is a scientific-fit recommendation, not an acceptance prediction.
+Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 12 pages, comprising 11 main pages and one reference page. All six tables and five figures precede the bibliography; there is no trailing appendix. The working title omits the track prefix. Add R+R: only if actually submitting to that ACSAC track, where the prefix is required. This is a scientific-fit recommendation, not an acceptance prediction.
 
 No SOTA claim, universal encoder-redundancy claim, discovered zero-day exploit, production FPR guarantee or claim that overfitting is solved. This is a bounded laboratory replication and failure analysis. It does not include timestamp-verified future traffic, all-device replication, a raw64 population rerun or exact unpublished author settings.
 

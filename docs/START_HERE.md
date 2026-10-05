@@ -1,8 +1,8 @@
 # Handoff for another research assistant
 
-Updated 2026-10-05T23:37:12.825031+06:00. Read CURRENT_STATUS, OCTOBER_EXPERIMENTS, LITERATURE_REVIEW and PUBLICATION_PLAN first. Sections explicitly marked earlier history preserve prior decisions; their old counters and pending-task claims do not override the latest record.
+Updated 2026-10-06T00:03:21.280802+06:00. Read CURRENT_STATUS, OCTOBER_EXPERIMENTS, LITERATURE_REVIEW and PUBLICATION_PLAN first. Sections explicitly marked earlier history preserve prior decisions; their old counters and pending-task claims do not override the latest record.
 
-Working title: **R+R: Calibration Transfer and Reference Saturation in Unseen-Attack Detection**. The focus shifted from a proposed hybrid detector to testing calibration-transfer failure and reference saturation. No required Transformer. No slides. Keep reconstruction competitors and negative results.
+Working title: **Unseen-Attack Detection Across Devices: Calibration Failures and Reference Refresh**. The focus shifted from a proposed hybrid detector to testing calibration-transfer failure and reference saturation. No required Transformer. No slides. Keep reconstruction competitors and negative results.
 
 Completed 1,522 scientific fits: 142 earlier + 960 nested candidates + 320 outer refits + 100 independent-device fits. Display operations and notebook demonstration refits are excluded. The new batch has 20 source configurations, nine scoring methods, 1,440 source/transfer operating points, 1,520 third-device operating points and 960 fixed-centroid floor-ablation points. Reference and floor changes use no new detector fits.
 
@@ -14,7 +14,7 @@ Phase5 is a MCDE mechanism reimplementation and author-code-based RePO port on D
 
 The weighted radius floor improves third-device mean recall from 35.84% to 61.15% at roughly 0.34% FPR, but is highly seed-sensitive. Seed11 shows no gain; weighted seed means range 35.89-85.80%. It does not outperform reconstruction and is not a stable superiority finding.
 
-Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 13 pages, comprising 11 main pages and two pages of references/appendix. This is a scientific-fit recommendation, not an acceptance prediction.
+Target: the next available ACSAC Reproduction and Replication (R+R) cycle. [Official 2026 CFP](https://www.acsac.org/2026/submissions/papers/) is the latest verified rule set: IEEEtran 1.8b, conference/compsoc, US Letter, anonymous, unchanged class layout, 11 main pages and at most five reference/appendix pages. The 2026 May 26 submission deadline passed; 2027 dates and rules are unverified. Current PDF: 12 pages, comprising 11 main pages and one reference page. All six tables and five figures precede the bibliography; there is no trailing appendix. The working title omits the track prefix. Add R+R: only if actually submitting to that ACSAC track, where the prefix is required. This is a scientific-fit recommendation, not an acceptance prediction.
 
 No SOTA claim, universal encoder-redundancy claim, discovered zero-day exploit, production FPR guarantee or claim that overfitting is solved. This is a bounded laboratory replication and failure analysis. It does not include timestamp-verified future traffic, all-device replication, a raw64 population rerun or exact unpublished author settings.
 
